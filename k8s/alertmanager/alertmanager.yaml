@@ -1,0 +1,10 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'ai-engine'
+
+receivers:
+- name: 'ai-engine'
+  webhook_configs:
+  - url: 'http://host.docker.internal:5000/alert'
