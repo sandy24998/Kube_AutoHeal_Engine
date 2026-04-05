@@ -1,0 +1,22 @@
+{
+  "alerts": [
+    {
+      "name": "HighCPUUsage",
+      "threshold": 0.5,
+      "duration": "1m",
+      "action": "scale_deployment"
+    },
+    {
+      "name": "HighMemoryUsage",
+      "threshold": 0.8,
+      "duration": "2m",
+      "action": "restart_deployment"
+    },
+    {
+      "name": "PodCrashLooping",
+      "threshold": 5,
+      "duration": "5m",
+      "action": "restart_deployment"
+    }
+  ]
+}
