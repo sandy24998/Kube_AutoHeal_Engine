@@ -1,0 +1,1 @@
+kubectl scale deployment cpu-hog-app --replicas=2
