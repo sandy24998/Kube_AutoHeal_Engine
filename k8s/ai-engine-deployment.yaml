@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-engine
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-engine
+  template:
+    metadata:
+      labels:
+        app: ai-engine
+    spec:
+      serviceAccountName: ai-engine
+      containers:
+      - name: ai-engine
+        image: ai-engine:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        env:
+        - name: LOG_LEVEL
+          value: "INFO"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
