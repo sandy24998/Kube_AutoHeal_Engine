@@ -3,11 +3,26 @@ __pycache__/
 *.py[cod]
 *$py.class
 .venv/
+venv/
 env/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.coverage
+.mypy_cache/
+*.pid
 
 # OS files
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env*.local
 
 # Kubernetes/Minikube local files
 .kube/
